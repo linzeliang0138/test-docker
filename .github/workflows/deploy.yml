@@ -35,9 +35,10 @@ jobs:
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v5
-        with: |
-          linzeliang0138/test-docker
-          ghcr.io/${{ github.repository }}
+        with:
+            images: |
+              linzeliang0138/test-docker
+              images: linzeliang0138/test-docker
 
       - name: Login to Docker Hub
         uses: docker/login-action@v2
